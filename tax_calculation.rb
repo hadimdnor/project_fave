@@ -26,6 +26,16 @@ def generate_monthly_payslip(name, annual_salary)
     puts "Monthly Income Tax: $'#{monthly_tax}'"
     net_monthly_income = gross_monthly_salary - monthly_tax
     puts "Net Monthly Income: $'#{net_monthly_income}'"
+    final = { 
+        "employee_name" => name, 
+
+        "gross_monthly_income" => gross_monthly_salary,
+  
+        "monthly_income_tax" => monthly_tax,
+    
+        "net_monthly_income" => net_monthly_income
+    }
+    return final
 end
     
-    generate_monthly_payslip("Ren", 60000)
+generate_monthly_payslip("Ren", 60000)
